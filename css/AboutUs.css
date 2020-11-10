@@ -1,0 +1,89 @@
+html,body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+    color: rgb(131, 113, 113);
+   
+}
+
+.container{
+    /* text-align: center; */
+    padding-top: 150px;
+}
+
+
+
+/***********/
+/*Animation*/
+/***********/
+/* .animation{
+    float: right;
+    padding-top: 30px;
+    padding-right: 20px;
+} */
+
+/************/
+/*Title*/
+/************/
+/* .title{
+    padding-top: 170px;
+    padding-left: 100px;
+    font-size: 30px;
+}
+
+.word{
+    padding-left: 17px;
+    margin-right:700px;
+    text-align: justify;
+} */
+
+
+
+/* Mobile View */
+
+@media screen and (max-width: 900px){
+    html,body{
+        overflow: auto;
+    }
+
+
+.animation{
+    margin-top: 10px;
+    margin-left: -100px;
+}
+.overlay a{
+    color:  #818181!important;
+    text-decoration: none;
+}
+
+lottie-player{
+    height: auto;
+    width: auto;
+}
+
+}
+
+@media screen and (max-width: 760px){
+
+.animation{
+    margin-top: 100px;
+    margin-left: -100px;
+}
+
+lottie-player{
+    width: auto;
+    height: auto;
+}
+
+}
+
+
+
+

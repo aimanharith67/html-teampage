@@ -1,0 +1,254 @@
+*
+*::before
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: 'Hind Madurai', sans-serif;
+    width: 95%; 
+    height: 625px;
+    /* background-image:url(/asset/bg2\ \(2\).png); */
+    background-color: rgb(234, 240, 251);
+    background-repeat: initial;
+}
+
+.overlay ul{
+    padding-top: 33px;
+    margin-right: -60px;
+}
+
+
+.overlay a{
+    color: black;
+}
+
+.wrapper-1 span{
+    display: none;
+  }
+  
+
+.container{
+    width: 100%;
+    max-width: 1100px;
+    padding-top: 90px;
+    padding-left: 90px;
+    padding-bottom: 90px;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.image-gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 8px;
+    grid-template-areas:
+        'img-1 img-2 img-3 img-3'
+        'img-1 img-4 img-5 img-6'
+        'img-7 img-7 img-8 img-6' ;
+}
+
+
+.image-gallery .box{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: default;
+}
+
+
+/* Image Grid */
+
+.img-1{
+    grid-area: img-1;
+    min-height: 624px;
+    background-image: url("/asset/pic/pic1.jpg");
+}
+
+.img-2{
+    grid-area: img-2;
+    background-image: url("/asset/pic/pic2.jpg");
+}
+
+.img-3{
+    grid-area: img-3;
+    background-image: url("/asset/pic/pic3.jpg");
+}
+
+.img-4{
+    grid-area: img-4;
+    background-image: url("/asset/pic/pic4.jpg");
+}
+
+.img-5{
+    grid-area: img-5;
+    background-image: url("/asset/pic/pic5.jpg");
+}
+
+.img-6{
+    grid-area: img-6;
+    min-height: 624px;
+    background-image: url("/asset/pic/pic6.jpg");
+}
+
+.img-7{
+    grid-area: img-7;
+    background-image: url("/asset/pic/pic7.jpg");
+}
+
+.img-8{
+    grid-area: img-8;
+    background-image: url("/asset/pic/pic8.jpg");
+}
+
+@media screen and (max-width: 900px) {
+    .image-gallery{
+        grid-template-areas:
+        'img-1 img-1 img-2 img-2'
+        'img-1 img-1 img-3 img-3'   
+        'img-4 img-4 img-5 img-5'
+        
+        'img-6 img-7 img-7 img-7'
+        'img-8 img-8 img-8 img-8';
+    }
+
+    .img-1{
+        min-height: 400px;
+    }
+
+    .img-6{
+    min-height: 200px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .container {
+       padding: 140px 10px;
+    }
+    .image-gallery{
+        grid-template-areas:
+        'img-1 img-1 img-1 img-1'
+        'img-2 img-2 img-2 img-2'
+        'img-3 img-3 img-3 img-3'
+        'img-4 img-4 img-4 img-4'
+        'img-5 img-5 img-5 img-5'
+        'img-6 img-6 img-6 img-6'
+        'img-7 img-7 img-7 img-7'
+        'img-8 img-8 img-8 img-8';
+    }
+    .image-gallery a,
+    .box{
+        min-height: 400px;
+        height: 200px;
+    }
+
+}
+
+/********************/
+/*In Picture Details*/
+/********************/
+
+/* Pop Up */
+.box .details{
+    transform: scaleY(0);
+    transition: transform .5s;
+}
+
+.box:hover .details{
+    transform: scaleY(1);
+}
+
+/* Details */
+
+.details{
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    bottom: 80px;
+    right: 10px;
+    background: rgba(0, 0,0, .8);
+   
+}
+
+.img-1 .details {
+    top: 50px;
+    bottom: 90px;
+}
+
+/* Content */
+
+.content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+    
+}
+
+ 
+.content h3{
+    font-family: 'Trispace', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: #8ef4fd;
+    
+}
+
+.content p{
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+/* Mobile View */
+
+@media screen and (max-width: 699px){
+    
+    .wrapper-1 span{
+      display: block;
+      padding-top: 50px;
+      position: fixed;
+      color: #818181;
+    }
+    .overlay a{
+        text-decoration: none;
+        color: #818181;  
+    }
+
+    .img-1 .content{
+       padding-left: 110px;
+    }
+    .img-2 .content{
+        padding-left: 160px;
+    }
+
+    .img-4 .content{
+        padding-left: 200px;
+    }
+
+    .img-5 .content{
+        padding-left: 160px;
+    }
+
+}

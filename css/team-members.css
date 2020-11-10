@@ -1,0 +1,196 @@
+html,body {
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+    color: rgb(131, 113, 113);
+    background-color: white;
+    
+}
+
+
+h3{
+    padding-top: 30px;
+    color: black;
+}
+span{
+    padding-top: 0px;
+    margin-bottom: 0px;
+}
+
+.overlay a{
+    color:  rgb(134, 132, 132);
+    text-decoration: none;
+}
+
+.container{
+    padding-top: 90px;
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
+ 
+
+.wrapper{
+    overflow: hidden;
+    margin-top: 130px;
+    padding-bottom: 100px;
+    /* background-color: #793680; */
+    background-image: url(/asset/team-pic.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    height: 450px;
+}
+
+.wrapper h1{
+    font-family: 'Monda', sans-serif;
+    font-size: 70px;
+    font-weight: 800;
+    color: white;
+    padding-top: 130px;
+    text-align: center;
+}
+
+
+.our-team{
+    background: #f7f5ec;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    padding: 30px 30px;
+    margin: 10px 0 20px;
+    
+}
+
+.our-team .pic{ 
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    margin-bottom: 0px;
+    z-index: 0;
+    position: relative;
+}
+
+.our-team .pic::before{
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background: #1785eb;
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.2;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+}
+
+.team-content{
+    z-index: 1;
+}
+
+
+.our-team:hover .pic::before{
+    height: 100%;
+}
+
+.our-team .pic:after{
+    content: "";
+    width: 113%;
+    height: 113%;
+    border-radius: 50%;
+    background: #1785eb;
+    position: absolute;
+    top: 0;
+    margin-top:1px ;
+    margin-left:1px ;
+    left: 0;
+    z-index: -1;
+}
+
+.our-team .pic img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .pic img{
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.7);
+}
+
+.our-team .team-content{
+    margin-bottom: 30px;
+}
+
+.our-team .title{
+    font-size: 22px;
+    font-weight: 700;
+    color: #4e5052;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.our-team .post{
+    display: block;
+    font-size: 15px;
+    color: #4e5052;
+}
+
+.our-team .social{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #1785eb;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.our-team:hover .social{
+    bottom: 0;
+}
+
+.our-team .social li{
+    display: inline-block;
+}
+
+.our-team .social li a{
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 17px;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+}
+
+.our-team .social li a:hover{
+    color: #1785eb;
+    background: #f7f5ec;
+}
+
+
+/* Mobile View */
+@media screen and (max-width: 699px){
+.overlay a{
+    color:  #818181;
+    text-decoration: none;
+}
+}
+
+
+

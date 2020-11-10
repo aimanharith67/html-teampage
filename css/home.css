@@ -1,0 +1,287 @@
+
+
+html,body {
+    height: 167.4%;
+    overflow: auto;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background: #333333;
+    /* font-family:'Source Sans Pro', sans-serif; */
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+    color: rgb(131, 113, 113);
+   
+}
+
+h1,h2,h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    margin: 0px auto;
+    width: 1200px;
+}
+
+
+a {
+    color: #f8f8f8;;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white; 
+}
+
+/* ***************** */
+/* Wrapper */
+/* ****************** */
+.wrapper-1 {
+    overflow: hidden;
+    padding-top: 0px;
+    padding-bottom: 100px;
+    background-color: #fac04d;
+    /* background-image: url(banner.jpg); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    height: 630px;
+}
+
+
+.wrapper-2 {
+  overflow: hidden;
+  padding-top: 0px;
+  background-color: rgb(245, 164, 153);
+  padding-bottom: 100px;
+  background-attachment: fixed;  
+  background-size: cover;
+  height: 590px;
+  padding-left: 200px;
+}
+
+.wrapper-3 {
+  overflow: hidden;
+  padding-top: 0px;
+  background-color: rgb(153, 185, 245);
+  padding-bottom: 100px;
+  background-attachment: fixed;  
+  background-size: cover;
+  height: 530px;
+}
+
+
+/***************/
+/*Title  */
+/**************/
+.titletop{
+  padding-top: 160px;
+  text-align: center;
+  color: white;
+}
+
+
+.title {
+    padding-top: 160px;
+    text-align: center;
+    color: white;
+}
+
+.title h1 a{
+    text-decoration: none;
+    font-size: 80px;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif; 
+}
+
+.title span{
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: grey;
+    font-size: 13px;
+}
+
+.title span a{
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+}
+
+.title h2{
+   
+    font-size: 80px;
+    color: white;
+    font-family: 'Hind Madurai', sans-serif;
+}
+
+
+  /**************/
+  /* Cards & Button */
+  /**************/
+
+  .card-deck{
+  padding-top: 50px;
+  text-align: center;
+  justify-content: space-between;
+  }
+  .card-title{
+    margin-top: -40px;
+  }
+  .card {
+  background-color: rgba(0, 0, 0, 0);
+  }
+
+  .card-text{
+    text-align: justify;
+  }
+ 
+  
+  /************/
+  /*Contact Icon*/
+  /************/
+
+  .contact {
+    padding-top: 20px;
+    padding-left: 370px;
+    display: flex;
+  }
+
+  .sm{
+    padding-top: 10px;
+    padding-left: 350px;
+    display: flex;
+  }
+
+.sm a{
+  display: inline-block;
+  padding-top: 10px;
+  font-size: 52px;
+  width:100px;
+  height: 90px;
+  text-align: center;
+  margin: 0 16px;
+  transition: .4s linear;
+  position: relative;
+}
+
+.twitter a {
+  color: #2B8FC4;
+}
+
+.insta a {
+  color: purple;
+}
+
+.sm a::before, .sm a::after{
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: .4s linear;
+}
+
+.sm a:hover{
+  transform:scale(.8);
+}
+
+.sm a:hover::before{
+  border-left: 4px solid;
+  border-right: 4px solid;
+  transform: skewX(20deg);
+}
+
+.sm a:hover::after{
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  transform: skewY(-20deg);
+}
+
+
+/* Mobile view */
+
+@media (max-width:1101px){
+
+  .wrapper-2{
+    margin-left:-100px;
+}
+
+.sm{
+  padding-left: 260px;
+}
+
+}
+
+@media (max-width:990px){
+  .wrapper-2{
+    margin-left: -190px;
+  }
+
+  .sm{
+    padding-left: 150px;
+  }
+}
+
+@media (max-width:767px){
+
+  .titletop{
+    padding-left: 30px;
+  }
+
+.wrapper-2{
+  height: 1390px;
+  padding-left: 350px;
+ 
+}
+
+.title h2{
+  padding-left: 55px;
+  text-align: left;
+  font-size:78px ;
+}
+
+.title{
+  text-align: left;
+}
+
+.title span{
+  font-size: 10px;
+  padding-left: 190px;
+}
+
+.card-deck{
+  padding-left: 40px;
+}
+
+.sm{
+  padding-top: 10px;
+  padding-left: 60px;
+  display: flex;
+
+}
+}
+
+@media (max-width:550px){
+  .wrapper-2{
+    padding-left: 250px;
+  }
+
+  .wrapper-3 h2{
+    padding-left: 10px;
+  }
+
+  .wrapper-3 span{
+    padding-left: 150px;
+  }
+
+  .sm{
+    padding-left: 20px;
+  }
+
+ 
+}
