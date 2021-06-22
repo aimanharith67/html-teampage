@@ -2,7 +2,7 @@
 
 html,body {
     height: 167.4%;
-    overflow: auto;
+    overflow:visible;
 }
 
 body {

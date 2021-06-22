@@ -81,7 +81,7 @@ span{
     position: relative;
 }
 
-.our-team .pic::before{
+.our-team .pic::before{ 
     content: "";
     width: 100%;
     height: 0;
